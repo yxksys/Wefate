@@ -1,0 +1,61 @@
+﻿@model Wefate.Models.IpAddress
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>IpAddress</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.floor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.floor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ip)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ip)
+            <san style="color:red">（最后一组数字改为2-200之间）</san>
+        </dd>
+        <dt class="col-sm-2">
+            子网掩码
+        </dt>
+        <dd class="col-sm-10">
+            255.255.255.0
+        </dd>
+        <dt class="col-sm-2">
+            网关
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ip)
+        </dd>
+        <dt class="col-sm-2">
+            DNS
+        </dt>
+        <dd class="col-sm-10">
+            210.31.103.254
+        </dd>
+        <dt class="col-sm-2">
+            DNS
+        </dt>
+        <dd class="col-sm-10">
+            59.49.49.49
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
